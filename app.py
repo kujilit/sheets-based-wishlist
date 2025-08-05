@@ -76,7 +76,7 @@ def add_wishlist_item(sheet, item_data):
     """Добавление нового элемента в вишлист"""
     try:
         row_data = [
-            str(item_data['selected']).lower(),
+            "" if not item_data['selected'] else "TRUE",
             item_data['gift'],
             item_data['category'],
             item_data['description'],
@@ -92,7 +92,7 @@ def update_wishlist_item(sheet, row_num, item_data):
     """Обновление элемента вишлиста"""
     try:
         row_data = [
-            str(item_data['selected']).lower(),
+            "" if not item_data['selected'] else "TRUE",
             item_data['gift'],
             item_data['category'],
             item_data['description'],
