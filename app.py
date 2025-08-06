@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", message="urllib3 v2 only supports OpenSSL 1.1.1+")
+
 import streamlit as st
 from src.config import PAGE_CONFIG, SHEETS_URL, SHEET_NAME
 from src.google_sheets import get_google_sheets_client, get_sheet_from_url
